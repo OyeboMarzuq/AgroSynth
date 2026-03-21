@@ -14,7 +14,7 @@ export default function Hero() {
           </div>
 
           {/* Heading */}
-          <h1 className="text-5xl lg:text-3xl font-black text-[#1a2e1a] leading-tight">
+          <h1 className="text-5xl lg:text-4xl font-black text-[#1a2e1a] leading-tight">
             Connecting farmers <br />
             to markets with{" "}
             <span className="text-[#2d7a2d]">AI-powered insights</span>
