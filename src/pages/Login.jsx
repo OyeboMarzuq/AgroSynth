@@ -1,6 +1,6 @@
-// src/pages/Login.jsx
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Leaf } from "lucide-react";
 
 export default function Login() {
   const [formData, setFormData] = useState({
@@ -15,7 +15,7 @@ export default function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Login data:", formData);
-    // connect to your backend API here later
+    // connecting the  backend API here later
   };
 
   return (
@@ -24,7 +24,9 @@ export default function Login() {
       {/* Navbar */}
       <nav className="flex items-center justify-between px-6 lg:px-16 py-4 bg-[#f5f5f0]">
         <Link to="/" className="flex items-center gap-2 font-bold text-xl text-[#1a2e1a]">
-          🌱 Agrosynth
+           <span> 
+            <Leaf/>
+            </span> Agrosynth
         </Link>
         <p className="text-sm text-[#666]">
           Don't have an account?{" "}
@@ -41,7 +43,9 @@ export default function Login() {
           {/* Header */}
           <div className="flex flex-col gap-2">
             <div className="bg-[#e8f0e8] w-12 h-12 rounded-xl flex items-center justify-center text-2xl">
-              🌱
+               <span> 
+            <Leaf/>
+            </span>
             </div>
             <h1 className="text-3xl font-black text-[#1a2e1a] mt-2">
               Welcome back
@@ -104,14 +108,14 @@ export default function Login() {
 
           </form>
 
-          {/* Divider */}
+          {/* divider */}
           <div className="flex items-center gap-3">
             <div className="flex-1 border-t border-[#dde8dd]" />
             <span className="text-xs text-[#aaa]">or continue as</span>
             <div className="flex-1 border-t border-[#dde8dd]" />
           </div>
 
-          {/* Role Buttons */}
+          {/* role buttons */}
           <div className="grid grid-cols-2 gap-3">
             <button className="border border-[#dde8dd] rounded-xl py-3 text-sm font-semibold text-[#1a2e1a] hover:bg-[#e8f0e8] transition-colors flex items-center justify-center gap-2">
               🧑‍🌾 Farmer

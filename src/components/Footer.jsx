@@ -1,5 +1,6 @@
 // src/components/Footer.jsx
 import { Link } from "react-router-dom";
+import { Leaf } from "lucide-react";
 
 const footerLinks = {
   Platform: [
@@ -29,7 +30,9 @@ export default function Footer() {
         {/* Brand Column */}
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-2 font-bold text-xl text-[#1a2e1a]">
-            🌱 Agrosynth
+            <span>
+              <Leaf/>
+              </span> Agrosynth
           </div>
           <p className="text-[#666] text-sm leading-relaxed max-w-xs">
             Connecting farmers to markets with AI-powered insights.

@@ -1,6 +1,7 @@
 // src/pages/Register.jsx
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Leaf } from "lucide-react";
 
 export default function Register() {
   const [formData, setFormData] = useState({
@@ -30,7 +31,7 @@ export default function Register() {
       return;
     }
     console.log("Register data:", formData);
-    // connect to your backend API here later
+    // connecting the backend API here later
   };
 
   return (
@@ -42,7 +43,9 @@ export default function Register() {
           to="/"
           className="flex items-center gap-2 font-bold text-xl text-[#1a2e1a]"
         >
-          🌱 Agrosynth
+           <span> 
+            <Leaf/>
+            </span> Agrosynth
         </Link>
         <p className="text-sm text-[#666]">
           Already have an account?{" "}
@@ -62,7 +65,9 @@ export default function Register() {
           {/* Header */}
           <div className="flex flex-col gap-2">
             <div className="bg-[#e8f0e8] w-12 h-12 rounded-xl flex items-center justify-center text-2xl">
-              🌱
+               <span> 
+            <Leaf/>
+            </span>
             </div>
             <h1 className="text-3xl font-black text-[#1a2e1a] mt-2">
               Create your account

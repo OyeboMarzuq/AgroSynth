@@ -32,6 +32,9 @@ import CTA from "./components/CTA";
 import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import HowItWorksPage from "./pages/HowItWorksPage";
+import AIInsights from "./pages/AiInsights";
+
 
 
 
@@ -57,8 +60,14 @@ function App() {
       <Route path="/login" element={<Login />} />
        {/* Signup Page */}
   <Route path="/register" element={<Register />} />
-      </Routes>
-    );
+
+
+     {/* how it works Page not the on eon landing page */}
+      <Route path="/how-it-works" element={<HowItWorksPage />} />
+      <Route path="/ai-insights" element={<AIInsights />} />
+
+        </Routes>
+      );
 }
 
 export default App;
