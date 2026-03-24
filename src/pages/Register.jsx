@@ -88,22 +88,22 @@ export default function Register() {
                 onClick={() => handleRoleSelect("farmer")}
                 className={`border rounded-xl py-3 text-sm font-semibold flex items-center justify-center gap-2 transition-colors
                   ${formData.role === "farmer"
-                    ? "border-[#2d7a2d] bg-[#e8f0e8] text-[#2d7a2d]"
+                    ?"border-[#2d7a2d] bg-[#253825] text-[#eaf2ea]"
                     : "border-[#dde8dd] text-[#1a2e1a] hover:bg-[#e8f0e8]"
                   }`}
               >
-                🧑‍🌾 Farmer
+                 Farmer
               </button>
               <button
                 type="button"
                 onClick={() => handleRoleSelect("buyer")}
                 className={`border rounded-xl py-3 text-sm font-semibold flex items-center justify-center gap-2 transition-colors
                   ${formData.role === "buyer"
-                    ? "border-[#2d7a2d] bg-[#e8f0e8] text-[#2d7a2d]"
+                    ? "border-[#2d7a2d] bg-[#253825] text-[#eaf2ea]"
                     : "border-[#dde8dd] text-[#1a2e1a] hover:bg-[#e8f0e8]"
                   }`}
               >
-                🛒 Buyer
+                 Buyer
               </button>
             </div>
           </div>

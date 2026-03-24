@@ -1,30 +1,34 @@
 // src/components/HowItWorks.jsx
+import { Upload } from "lucide-react";
+import { BrainCircuit } from "lucide-react";
+import { ShoppingBasket } from "lucide-react";
+import { Car } from "lucide-react";
 
 const steps = [
   {
     number: 1,
-    icon: "📤",
+    icon: <Upload/>,
     title: "Farmers upload crops",
     description:
       "List your harvest with photos, quantity, and location. Voice upload available.",
   },
   {
     number: 2,
-    icon: "🧠",
+    icon: <BrainCircuit/>,
     title: "AI predicts price & demand",
     description:
       "Our AI analyzes market trends and suggests the best selling price.",
   },
   {
     number: 3,
-    icon: "🛒",
+    icon: <ShoppingBasket/> ,
     title: "Buyers place orders",
     description:
       "Buyers browse, compare, and order directly from verified farmers.",
   },
   {
     number: 4,
-    icon: "🚚",
+    icon: <Car/>,
     title: "Secure payment & delivery",
     description:
       "Escrow payments protect both parties until delivery is confirmed.",

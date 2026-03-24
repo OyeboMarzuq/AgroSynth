@@ -2,6 +2,8 @@ import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Loader } from "lucide-react";
+import { CloudCheckIcon } from "lucide-react";
+import { Crop } from "lucide-react";
 
 const crops = [
   "Maize", "Yam", "Cassava", "Tomatoes", "Rice",
@@ -72,8 +74,8 @@ Respond ONLY in this exact JSON format with no extra text:
 
       {/* Page Header */}
       <div className="px-6 lg:px-16 py-12">
-        <div className="bg-[#e8f0e8] text-[#2d7a2d] text-sm font-medium px-4 py-2 rounded-full w-fit mb-4">
-          🧠 AI-powered insights
+        <div className="bg-[#e8f0e8] text-[#2d7a2d] text-sm font-medium flex gap-2 px-4 py-2 rounded-full w-fit mb-4">
+         <span><CloudCheckIcon/></span>  AI-powered insights
         </div>
         <h1 className="text-4xl lg:text-5xl font-black text-[#1a2e1a]">
           AI price prediction
@@ -89,8 +91,8 @@ Respond ONLY in this exact JSON format with no extra text:
         {/* Left Form */}
         <div className="bg-white rounded-2xl p-8 flex flex-col gap-6">
           <div className="flex items-center gap-3">
-            <div className="bg-[#e8f0e8] w-11 h-11 rounded-xl flex items-center justify-center text-xl">🧠</div>
-            <h2 className="text-xl font-black text-[#1a2e1a]">Enter crop details</h2>
+            <div className="bg-[#e8f0e8] w-11 h-11 rounded-xl flex items-center justify-center text-xl"> <Crop/></div>
+            <h2 className="text-xl font-black flex gap-1 text-[#1a2e1a]">Enter crop details</h2>
           </div>
 
           {/* Crop Type */}
@@ -133,7 +135,7 @@ Respond ONLY in this exact JSON format with no extra text:
 
           <button onClick={handlePredict} disabled={loading}
             className="bg-[#2d7a2d] disabled:bg-[#88bb88] text-white py-3 rounded-xl font-bold text-sm hover:bg-[#256325] transition-colors">
-            {loading ? "🧠 Predicting..." : "Predict price →"}
+            {loading ? " Predicting..." : "Predict price →"}
           </button>
         </div>
 
@@ -141,7 +143,7 @@ Respond ONLY in this exact JSON format with no extra text:
         <div className="bg-white rounded-2xl p-8 flex flex-col gap-6">
           {!result && !loading && (
             <div className="flex-1 flex flex-col items-center justify-center gap-4 text-center h-full py-16">
-              <div className="bg-[#e8f0e8] w-20 h-20 rounded-2xl flex items-center justify-center text-4xl">🧠</div>
+              <div className="bg-[#e8f0e8] w-20 h-20 rounded-2xl flex items-center justify-center text-4xl"> <CloudCheckIcon/></div>
               <h3 className="text-xl font-black text-[#1a2e1a]">Enter crop details to get started</h3>
               <p className="text-[#888] text-sm max-w-xs leading-relaxed">
                 Fill in the form on the left and our AI will predict the best price for your crop.
@@ -197,7 +199,7 @@ Respond ONLY in this exact JSON format with no extra text:
                   <p className={`text-xs font-bold ${
                     result.marketTrend === "Rising" ? "text-green-600" :
                     result.marketTrend === "Stable" ? "text-yellow-600" : "text-red-600"}`}>
-                    {result.marketTrend === "Rising" ? "📈" : result.marketTrend === "Stable" ? "➡️" : "📉"} {result.marketTrend}
+                    {result.marketTrend === "Rising" ? <CloudCheckIcon/> : result.marketTrend === "Stable" ? "➡️" : "📉"} {result.marketTrend}
                   </p>
                 </div>
                 <div className="bg-[#f5f5f0] rounded-xl p-3 text-center">
@@ -208,7 +210,7 @@ Respond ONLY in this exact JSON format with no extra text:
 
               {/* Insight */}
               <div className="bg-[#e8f0e8] rounded-xl p-4 flex gap-3">
-                <span>💡</span>
+                <span> <CloudCheckIcon/></span>
                 <p className="text-sm text-[#2d5a2d] leading-relaxed">{result.insight}</p>
               </div>
 

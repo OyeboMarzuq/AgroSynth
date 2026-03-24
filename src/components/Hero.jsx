@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { LeafyGreen } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -10,7 +11,7 @@ export default function Hero() {
 
           {/* Badge */}
           <div className="flex items-center gap-2 bg-[#e8f0e8] text-[#2d7a2d] text-sm font-medium px-4 py-2 rounded-full w-fit">
-            🌱 AI-powered marketplace
+          <span> <LeafyGreen/> </span>   AI-powered marketplace
           </div>
 
           {/* Heading */}

@@ -1,26 +1,30 @@
 // src/components/Features.jsx
+import { ChartArea } from "lucide-react";
+import { Cloud } from "lucide-react";
+import { MonitorCloud } from "lucide-react";
+import { CalendarSyncIcon } from "lucide-react";
 
   const features = [
   {
-    icon: "📈",
+    icon: <ChartArea/>,
     title: "AI crop price prediction",
     description:
       "Get accurate price forecasts based on market data, weather, and regional demand.",
   },
   {
-    icon: "📊",
+    icon: <Cloud/>,
     title: "Demand forecasting",
     description:
       "Know what buyers want before you plant. Plan your harvest with data-driven insights.",
   },
   {
-    icon: "🛡️",
+    icon: <MonitorCloud/>,
     title: "Secure marketplace",
     description:
       "Every transaction is protected with escrow payments and verified farmer profiles.",
   },
   {
-    icon: "🌱",
+    icon: <CalendarSyncIcon/>,
     title: "Fraud protection",
     description:
       "AI-powered fraud detection keeps your money and crops safe from bad actors.",

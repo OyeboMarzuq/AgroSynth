@@ -18,6 +18,12 @@ export default function Login() {
     // connecting the  backend API here later
   };
 
+  
+  const handleRoleSelect = (role) => {
+    setFormData({ ...formData, role });
+  };
+
+
   return (
     <div className="min-h-screen bg-[#f5f5f0] flex flex-col">
       
@@ -116,13 +122,44 @@ export default function Login() {
           </div>
 
           {/* role buttons */}
-          <div className="grid grid-cols-2 gap-3">
+          {/* <div className="grid grid-cols-2 gap-3">
             <button className="border border-[#dde8dd] rounded-xl py-3 text-sm font-semibold text-[#1a2e1a] hover:bg-[#e8f0e8] transition-colors flex items-center justify-center gap-2">
-              🧑‍🌾 Farmer
+               Farmer
             </button>
             <button className="border border-[#dde8dd] rounded-xl py-3 text-sm font-semibold text-[#1a2e1a] hover:bg-[#e8f0e8] transition-colors flex items-center justify-center gap-2">
-              🛒 Buyer
+               Buyer
             </button>
+          </div> */}
+
+
+             <div className="flex flex-col gap-2">
+            <label className="text-sm font-semibold text-[#1a2e1a]">
+              I am a
+            </label>
+            <div className="grid grid-cols-2 gap-3">
+              <button
+                type="button"
+                onClick={() => handleRoleSelect("farmer")}
+                className={`border rounded-xl py-3 text-sm font-semibold flex items-center justify-center gap-2 transition-colors
+                  ${formData.role === "farmer"
+                    ?"border-[#2d7a2d] bg-[#253825] text-[#eaf2ea]"
+                    : "border-[#dde8dd] text-[#1a2e1a] hover:bg-[#e8f0e8]"
+                  }`}
+              >
+                 Farmer
+              </button>
+              <button
+                type="button"
+                onClick={() => handleRoleSelect("buyer")}
+                className={`border rounded-xl py-3 text-sm font-semibold flex items-center justify-center gap-2 transition-colors
+                  ${formData.role === "buyer"
+                    ? "border-[#2d7a2d] bg-[#253825] text-[#eaf2ea]"
+                    : "border-[#dde8dd] text-[#1a2e1a] hover:bg-[#e8f0e8]"
+                  }`}
+              >
+                 Buyer
+              </button>
+            </div>
           </div>
 
           {/* Footer note */}

@@ -2,11 +2,16 @@
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { LeafyGreen } from "lucide-react";
+import { Upload } from "lucide-react";
+import { ComputerIcon } from "lucide-react";
+import { ShoppingBasket } from "lucide-react";
+import { Car } from "lucide-react";
 
 const steps = [
   {
     number: 1,
-    icon: "📤",
+    icon: <Upload/>,
     title: "Farmers upload crops",
     description:
       "List your harvest with photos, quantity, and location. Voice upload available for farmers who prefer speaking over typing.",
@@ -19,7 +24,7 @@ const steps = [
   },
   {
     number: 2,
-    icon: "🧠",
+    icon: <ComputerIcon/>,
     title: "AI predicts price & demand",
     description:
       "Our AI analyzes market trends, weather patterns, and regional demand to suggest the best selling price for your crops.",
@@ -32,7 +37,7 @@ const steps = [
   },
   {
     number: 3,
-    icon: "🛒",
+    icon: <ShoppingBasket/> ,
     title: "Buyers place orders",
     description:
       "Buyers browse verified crop listings, compare prices, and order directly from farmers with full transparency.",
@@ -45,7 +50,7 @@ const steps = [
   },
   {
     number: 4,
-    icon: "🚚",
+    icon: <Car/>,
     title: "Secure payment & delivery",
     description:
       "Escrow payments protect both parties. Funds are only released when delivery is confirmed by the buyer.",
@@ -88,8 +93,8 @@ export default function HowItWorksPage() {
 
       {/* Hero */}
       <section className="px-6 lg:px-16 py-24 text-center flex flex-col items-center gap-6">
-        <div className="bg-[#e8f0e8] text-[#2d7a2d] text-sm font-medium px-4 py-2 rounded-full w-fit">
-          🌱 Simple process
+        <div className="bg-[#e8f0e8] text-[#2d7a2d] text-sm font-medium px-4 py-2 flex gap-2 rounded-full w-fit">
+         <span> <LeafyGreen/> </span> Simple process
         </div>
         <h1 className="text-5xl lg:text-6xl font-black text-[#1a2e1a] max-w-3xl leading-tight">
           From farm to buyer in{" "}
