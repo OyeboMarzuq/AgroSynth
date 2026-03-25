@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { LeafyGreen } from "lucide-react";
+import { ChartBar } from "lucide-react";
+import { MicIcon } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -45,7 +47,8 @@ export default function Hero() {
 
           {/* Voice onboarding note */}
           <p className="text-[#888] text-sm flex items-center gap-2">
-            🎙️ Voice-guided onboarding available
+            <span>
+             <MicIcon/> </span> Voice-guided onboarding available
           </p>
         </div>
 
@@ -64,7 +67,7 @@ export default function Hero() {
           {/* Price Prediction Floating Card */}
           <div className="absolute bottom-[-20px] right-4 bg-white rounded-2xl shadow-lg px-6 py-4 flex items-center gap-3">
             <div className="bg-orange-100 p-2 rounded-full text-orange-500 text-xl">
-              📈
+              <ChartBar/>
             </div>
             <div>
               <p className="text-xs text-[#888]">Price prediction</p>

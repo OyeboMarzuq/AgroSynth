@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Leaf } from "lucide-react";
 
-const navLinks = ["Home", "Marketplace", "AI Insights", "How It Works", "Farmer", "Buyer", "Admin"];
+const navLinks = ["Marketplace", "AI Insights", "How It Works", "Farmer", "Buyer", "Admin"];
 
 export default function Navbar() {
   const [active, setActive] = useState("Home");
@@ -23,6 +23,9 @@ export default function Navbar() {
 
         {/* Desktop Links */}
         <div className="hidden lg:flex items-center gap-1">
+           <Link to="/" className="text-sm font-medium text-[#1a2e1a]">
+            Home
+          </Link>
           {navLinks.map(link => (
             <Link
               key={link}
@@ -66,6 +69,9 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="lg:hidden mt-4 flex flex-col gap-2 pb-4 border-t border-[#dde8dd] pt-4">
+             <Link to="/" className="text-sm font-medium ml-4  text-[#1a2e1a] text-[#555] hover:text-[#1a2e1a] ">
+            Home
+          </Link>
           {navLinks.map(link => (
             <Link
               key={link}

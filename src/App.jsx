@@ -34,6 +34,10 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import HowItWorksPage from "./pages/HowItWorksPage";
 import AIInsights from "./pages/AiInsights";
+import Marketplace from "./pages/MarketPlace";
+import FarmerDashboard from "./pages/FarmerDashboard";
+import BuyerDashboard from "./pages/BuyerDashboard";
+import AdminDashboard from "./pages/AdminDashboard";
 
 
 
@@ -65,7 +69,10 @@ function App() {
      {/* how it works Page not the on eon landing page */}
       <Route path="/how-it-works" element={<HowItWorksPage />} />
       <Route path="/ai-insights" element={<AIInsights />} />
-
+      <Route path="/marketplace" element={<Marketplace />} />
+      <Route path="/farmer" element={<FarmerDashboard />} />
+      <Route path="/buyer" element={<BuyerDashboard />}/>
+      <Route path="/admin" element={<AdminDashboard />} />
         </Routes>
       );
 }

@@ -133,9 +133,9 @@ export default function Login() {
 
 
              <div className="flex flex-col gap-2">
-            <label className="text-sm font-semibold text-[#1a2e1a]">
+            {/* <label className="text-sm font-semibold text-[#1a2e1a]">
               I am a
-            </label>
+            </label> */}
             <div className="grid grid-cols-2 gap-3">
               <button
                 type="button"
