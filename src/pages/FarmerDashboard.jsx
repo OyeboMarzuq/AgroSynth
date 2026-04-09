@@ -120,8 +120,11 @@ const statusColors = {
   Processing: "bg-yellow-100 text-yellow-700",
 };
 
+
 export default function FarmerDashboard() {
+  const user = JSON.parse(localStorage.getItem("user"));
   const [activeTab, setActiveTab] = useState("overview");
+  
 
   return (
     <div className="min-h-screen bg-[#f5f5f0] flex flex-col">
@@ -135,7 +138,7 @@ export default function FarmerDashboard() {
             Farmer dashboard
           </h1>
           <p className="text-[#666] text-lg mt-1">
-            Welcome back, Adamu. Here is your farm overview.
+  Welcome back, {user?.fullname?.split(" ")[0]}. Here is your farm overview.
           </p>
         </div>
 
