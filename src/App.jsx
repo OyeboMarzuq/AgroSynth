@@ -21,7 +21,7 @@
 //   );
 // }
 
-// export default App
+// export defaul
 
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
